@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gamesApp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Set the default font size for the entire app -->
+            <OnPlatform x:TypeArguments="x:Double" x:Key="DefaultFontSize">
+                <On Platform="iOS">14</On>
+                <On Platform="Android">14</On>
+                <On Platform="UWP">14</On>
+            </OnPlatform>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

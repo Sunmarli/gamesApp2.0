@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gamesApp.Views.DBGamePage">
+
+    <StackLayout Padding="30" BackgroundColor="#1F2649">
+        <Label Text="Title" FontSize="20" TextColor="#EEEBE8"/>
+        <Entry Text="{Binding Title}" TextColor="#EEEBE8"/>
+
+        <Label Text="Description" FontSize="20"  TextColor="#EEEBE8" />
+        <Entry Text="{Binding Description}" TextColor="#EEEBE8" IsTextPredictionEnabled="false"/>
+
+        <Label Text="ImageUrl" FontSize="20"  TextColor="#EEEBE8" />
+        <Entry Text="{Binding ImageUrl}" TextColor="#EEEBE8" />
+
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Save game" Clicked="SaveGame" />
+            <Button Text="Delete" Clicked="DeleteGame" />
+            <Button Text="Cancel" Clicked="Cancel" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

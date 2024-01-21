@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gamesApp.Views.DBListPage"
+             >
+
+    <CarouselView x:Name="gamesList" ItemsSource="{Binding}"  >
+        <CarouselView.ItemTemplate>
+
+            <DataTemplate>
+                <!-- Your carousel item template here -->
+                <Frame Padding="30"
+                          
+                           HasShadow="True"
+                           BackgroundColor="#1F2649">
+                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Image Source="{Binding ImageUrl}" HeightRequest="250"/>
+                        <Label Text="{Binding Title}" FontAttributes="Bold" TextColor="#EEEBE8" FontSize="22" HorizontalOptions="CenterAndExpand"/>
+                        <Label Text="{Binding Description}" FontSize="18" TextColor="#EEEBE8"/>
+
+                        <Button Text="Add Game" Clicked="CreateGame" />
+                       
+                        <Button Text="Details" Clicked="OnDetailsClicked" CommandParameter="{Binding .}" />
+                        <Button Text="Delete" Clicked="OnDeleteClicked" CommandParameter="{Binding .}" />
+
+                        <!-- Add other game properties as needed -->
+                    </StackLayout>
+                </Frame>
+            </DataTemplate>
+           
+        </CarouselView.ItemTemplate>
+    </CarouselView>
+
+</ContentPage>
