@@ -37,12 +37,7 @@ namespace gamesApp.Views
             gamePage.BindingContext = game;
             await Navigation.PushAsync(gamePage);
         }
-        //private async void DeleteGame(object sender, EventArgs e)
-        //{
-        //    var Game = (Game)BindingContext;
-        //    App.Database.Delete(Game.Id);
-        //    this.Navigation.PopAsync();
-        //}
+       
       
         private async void OnDetailsClicked(object sender, EventArgs e)
         {
